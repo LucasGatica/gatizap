@@ -1,0 +1,69 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Cor de fundo pastel */
+    color: #333333; /* Cor do texto */
+    padding: 20px;
+}
+
+h1 {
+    color: #666666;
+}
+
+a {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos do Formulário */
+form {
+    background-color: #f2f2f2; /* Cor de fundo do formulário */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+input[type="text"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #a7c0cd; /* Cor pastel para botão */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #95adb6;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos da Lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f2f2f2; /* Cor de fundo dos itens da lista */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Enviar Mensagem</title>
+</head>
+<body>
+    <h1>Enviar Mensagem</h1>
+    <form action="{{ url_for('enviar_mensagem') }}" method="post">
+        <label for="conta_id">Escolha a Conta:</label>
+        <select id="conta_id" name="conta_id" required>
+            {% for conta in contas %}
+                <option value="{{ conta.id }}">{{ conta.nome }} ({{ conta.telefone }})</option>
+            {% endfor %}
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <a href="{{ url_for('home') }}">Voltar</a>
+</body>
+</html>

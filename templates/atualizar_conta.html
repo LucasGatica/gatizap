@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Atualizar Conta</title>
+</head>
+<body>
+    <h1>Atualizar Conta</h1>
+    <form action="{{ url_for('atualizar_conta', id=conta.id) }}" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="{{ conta.nome }}" required>
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" value="{{ conta.telefone }}" required>
+        <button type="submit">Atualizar</button>
+    </form>
+    <a href="{{ url_for('listar_contas') }}">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Listar Contas</title>
+</head>
+<body>
+    <h1>Listar Contas</h1>
+    <ul>
+        {% for conta in contas %}
+            <li>{{ conta.nome }} - {{ conta.telefone }}
+                <a href="{{ url_for('atualizar_conta', id=conta.id) }}">Editar</a>
+                <a href="{{ url_for('deletar_conta', id=conta.id) }}">Deletar</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Voltar</a>
+</body>
+</html>

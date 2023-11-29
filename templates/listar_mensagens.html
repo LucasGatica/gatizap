@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Listar Mensagens</title>
+</head>
+<body>
+    <h1>Últimas Mensagens</h1>
+    <ul>
+        {% for conta_id, nome, conteudo in mensagens %}
+            <li><a href="{{ url_for('conversa', conta_id=conta_id) }}">{{ nome }}</a>: {{ conteudo }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Voltar</a>
+</body>
+</html>

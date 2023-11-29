@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <title>Home</title>
+</head>
+<body>
+    <h1>Gatizap</h1>
+    <nav>
+        <ul>
+            <li><a href="/criar_conta">Acicionar Contato</a></li>
+            <li><a href="/listar_contas">Listar Contatos</a></li>
+            <li><a href="/enviar_mensagem">Enviar Mensagem</a></li>
+            <li><a href="{{ url_for('listar_mensagens') }}">Listar Mensagens</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
